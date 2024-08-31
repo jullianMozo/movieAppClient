@@ -29,7 +29,7 @@ export default function AddMovie() {
         }
 
         // Fetch API to create a new movie
-        fetch('http://localhost:4000/movies/addMovie', {
+        fetch('https://movie-app-client-psi.vercel.app/movies/addMovie', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

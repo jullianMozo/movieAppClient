@@ -25,7 +25,7 @@ function App() {
 
   useEffect(() => {
 
-    fetch('http://localhost:4000/users/details', {
+    fetch('https://movie-app-client-psi.vercel.app/users/details', {
       headers: {
         Authorization: `Bearer ${localStorage.getItem('token')}`
       }

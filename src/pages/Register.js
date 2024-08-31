@@ -30,7 +30,7 @@ export default function Register() {
 
         e.preventDefault();
 
-        fetch('http://localhost:4000/users/register', {
+        fetch('https://movie-app-client-psi.vercel.app/users/register', {
 
             method: 'POST',
             headers: {

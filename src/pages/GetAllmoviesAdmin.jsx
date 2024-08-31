@@ -20,7 +20,7 @@ export default function MoviesList() {
     const [genre, setGenre] = useState('');
 
     useEffect(() => {
-        fetch('http://localhost:4000/movies/getMovies')
+        fetch('https://movie-app-client-psi.vercel.app/movies/getMovies')
             .then(res => res.json())
             .then(data => setMovies(data.movies))
             .catch(err => console.error('Error fetching movies:', err));
@@ -29,7 +29,7 @@ export default function MoviesList() {
     const handleDelete = (id) => {
         const token = localStorage.getItem('token');
 
-        fetch(`http://localhost:4000/movies/deleteMovie/${id}`, {
+        fetch(`https://movie-app-client-psi.vercel.app/movies/deleteMovie/${id}`, {
             method: 'DELETE',
             headers: {
                 'Authorization': `Bearer ${token}`
@@ -65,7 +65,7 @@ export default function MoviesList() {
     const handleUpdate = (id) => {
         const token = localStorage.getItem('token');
 
-        fetch(`http://localhost:4000/movies/updateMovie/${id}`, {
+        fetch(`https://movie-app-client-psi.vercel.app/movies/updateMovie/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

@@ -9,7 +9,7 @@ export default function MoviesList() {
     const { user } = useContext(UserContext);
 
     useEffect(() => {
-        fetch('http://localhost:4000/movies/getMovies')
+        fetch('https://movie-app-client-psi.vercel.app/movies/getMovies')
             .then(res => res.json())
             .then(data => setMovies(data.movies))
             .catch(err => console.error('Error fetching movies:', err));

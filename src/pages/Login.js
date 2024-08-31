@@ -23,7 +23,7 @@ export default function Login() {
 
         // Prevents page redirection via form submission
         e.preventDefault();
-        fetch('http://localhost:4000/users/login',{
+        fetch('https://movie-app-client-psi.vercel.app/users/login',{
 
         method: 'POST',
         headers: {
@@ -59,7 +59,7 @@ export default function Login() {
     }
 
     const retrieveUserDetails = (token) => {
-        fetch('http://localhost:4000/users/details', {
+        fetch('https://movie-app-client-psi.vercel.app/users/details', {
             headers: {
                 Authorization: `Bearer ${token}`
             }
