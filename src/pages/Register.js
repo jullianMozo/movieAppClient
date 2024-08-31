@@ -30,7 +30,7 @@ export default function Register() {
 
         e.preventDefault();
 
-        fetch('https://movie-app-client-psi.vercel.app/users/register', {
+        fetch('hhttps://movieappapi-mozo.onrender.com/users/register', {
 
             method: 'POST',
             headers: {

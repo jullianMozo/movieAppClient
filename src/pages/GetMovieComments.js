@@ -12,7 +12,7 @@ export default function MovieComments() {
 
     // Effect hook to fetch comments from the server when component mounts or movie ID changes
     useEffect(() => {
-        fetch(`https://movie-app-client-psi.vercel.app/movies/getcomments/${id}`, {
+        fetch(`https://movieappapi-mozo.onrender.com/movies/getcomments/${id}`, {
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem('token')}` // Send JWT token for authentication
             }
@@ -34,7 +34,7 @@ export default function MovieComments() {
     const handleAddComment = (e) => {
         e.preventDefault();
 
-        fetch(`https://movie-app-client-psi.vercel.app/movies/addComment/${id}`, {
+        fetch(`https://movieappapi-mozo.onrender.com/movies/addComment/${id}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

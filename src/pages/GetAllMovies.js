@@ -9,7 +9,7 @@ export default function MoviesList() {
     const { user } = useContext(UserContext);
 
     useEffect(() => {
-        fetch('https://movie-app-client-psi.vercel.app/movies/getMovies')
+        fetch('https://movieappapi-mozo.onrender.com/movies/getMovies')
             .then(res => res.json())
             .then(data => setMovies(data.movies))
             .catch(err => console.error('Error fetching movies:', err));

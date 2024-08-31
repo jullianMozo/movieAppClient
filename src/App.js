@@ -25,7 +25,7 @@ function App() {
 
   useEffect(() => {
 
-    fetch('https://movie-app-client-psi.vercel.app/users/details', {
+    fetch('https://movieappapi-mozo.onrender.com/users/details', {
       headers: {
         Authorization: `Bearer ${localStorage.getItem('token')}`
       }
