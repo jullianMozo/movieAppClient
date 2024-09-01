@@ -9,7 +9,7 @@ export default function MoviesList() {
     const { user } = useContext(UserContext);
 
     useEffect(() => {
-        fetch('https://movieappapi-mozo.onrender.com/movies/getMovies')
+        fetch('https://movieappapi-bor4.onrender.com/movies/getMovies')
             .then(res => res.json())
             .then(data => setMovies(data.movies))
             .catch(err => console.error('Error fetching movies:', err));

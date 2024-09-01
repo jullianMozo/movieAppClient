@@ -30,7 +30,7 @@ export default function Register() {
 
         e.preventDefault();
 
-        fetch('hhttps://movieappapi-mozo.onrender.com/users/register', {
+        fetch('https://movieappapi-bor4.onrender.com/users/register', {
 
             method: 'POST',
             headers: {

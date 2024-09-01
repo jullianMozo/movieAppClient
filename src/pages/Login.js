@@ -23,7 +23,7 @@ export default function Login() {
 
         // Prevents page redirection via form submission
         e.preventDefault();
-        fetch('https://movieappapi-mozo.onrender.com/users/login',{
+        fetch('https://movieappapi-bor4.onrender.com/users/login',{
 
         method: 'POST',
         headers: {
@@ -59,7 +59,7 @@ export default function Login() {
     }
 
     const retrieveUserDetails = (token) => {
-        fetch('https://movieappapi-mozo.onrender.com/users/details', {
+        fetch('https://movieappapi-bor4.onrender.com/users/details', {
             headers: {
                 Authorization: `Bearer ${token}`
             }

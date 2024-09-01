@@ -20,7 +20,7 @@ export default function MoviesList() {
     const [genre, setGenre] = useState('');
 
     useEffect(() => {
-        fetch('https://movieappapi-mozo.onrender.com/movies/getMovies')
+        fetch('https://movieappapi-bor4.onrender.com/movies/getMovies')
             .then(res => res.json())
             .then(data => setMovies(data.movies))
             .catch(err => console.error('Error fetching movies:', err));
@@ -29,7 +29,7 @@ export default function MoviesList() {
     const handleDelete = (id) => {
         const token = localStorage.getItem('token');
 
-        fetch(`https://movieappapi-mozo.onrender.com/movies/deleteMovie/${id}`, {
+        fetch(`https://movieappapi-bor4.onrender.com/movies/deleteMovie/${id}`, {
             method: 'DELETE',
             headers: {
                 'Authorization': `Bearer ${token}`
@@ -65,7 +65,7 @@ export default function MoviesList() {
     const handleUpdate = (id) => {
         const token = localStorage.getItem('token');
 
-        fetch(`https://movieappapi-mozo.onrender.com/movies/updateMovie/${id}`, {
+        fetch(`https://movieappapi-bor4.onrender.com/movies/updateMovie/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

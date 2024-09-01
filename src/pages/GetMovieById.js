@@ -8,7 +8,7 @@ export default function MovieDetails() {
     const [movie, setMovie] = useState(null);
 
     useEffect(() => {
-        fetch(`https://movieappapi-mozo.onrender.com/movies/getMovie/${id}`)
+        fetch(`https://movieappapi-bor4.onrender.com/movies/getMovie/${id}`)
             .then(res => res.json())
             .then(data => setMovie(data))
             .catch(err => console.error('Error fetching movie details:', err));
